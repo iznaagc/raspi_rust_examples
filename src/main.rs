@@ -1,6 +1,5 @@
-mod led_flash_001;
+// mod led_flash_001; // 001_Lチカ
 
-fn main() -> Result<(), Box<dyn std::error::Error>> {
-    println!("Hello, world!");
-    led_flash_001::blink::blink()
+fn main() {
+    println!("Hello, World!");
 }
