@@ -4,7 +4,7 @@ use std::{sync::atomic::{AtomicBool, Ordering}, sync::Arc, thread, time::Duratio
 const GPIO_LED: u8 = 17;
 
 pub fn pwm_led() -> Result<(), Box<dyn std::error::Error>> {
-  let gpio = GPIO::new()?;
+  let gpio = Gpio::new()?;
   let mut pin = gpio.get(GPIO_LED)?.into_output();
 
   let max_duty_cycle = 100; // 最大デューティ比
